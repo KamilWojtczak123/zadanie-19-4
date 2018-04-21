@@ -4,6 +4,17 @@ import {EDIT_COMMENT} from './actions'
 import {Thumb_UP_COMMENT} from './actions'
 import {THUMB_DOWN_COMMENT} from './actions'
 
+
+import { combineReducers } from 'redux';
+import comments from './comments';
+import users from './users';
+
+const app = combineReducers({
+    comments,
+    users
+});
+
+
 function reducer(state = initialState, action) {
     switch(action.type) {
         case ADD_COMMENT:
