@@ -27,11 +27,11 @@ function reducer(state = initialState, action) {
                 , state]
             })
         case REMOVE_COMMENT: 
-            return Object.assign({}, state {
+            return Object.assign({}, state, {
                 comments: state.comments.filter(comment => comment.id != action.id)
             })
         case EDIT_COMMENT:
-            return Object.assign({}, state {
+            return Object.assign({}, state, {
                 comments:         
                     id: action.id,
                     text: action.text
@@ -44,7 +44,7 @@ function reducer(state = initialState, action) {
                 ]
             })
     case THUMB_UP_COMMENT:
-            return Object.assign({}, state {
+            return Object.assign({}, state, {
                 comments: [
                     id: action.id
             })
