@@ -14,34 +14,31 @@ function addComment(text) {
     }
 }
 
-function removeComment(text) {
+function removeComment(id) {
     return {
         type: REMOVE_COMMENT,
-        text,
-        id: uuid.v4()
+        id
     }
 }
 
-function editComponent(text) {
+function editComponent(id, text) {
     return {
         type: EDIT_COMPONRNT,
         text,
-        id: uuid.v4()
+        id
     }
 }
 
-function thumbUpComment(number) {
+function thumbUpComment(id) {
     return {
         type:THUMB_UP_COMMENT,
-        mumber,
-        id: uuid.v4()
+        id
     }
 }
 
-function thumbDownComment(number) {
+function thumbDownComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
-        number,
-        id: uuid.v4();
+        id
     }
 }

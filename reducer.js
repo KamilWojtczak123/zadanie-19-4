@@ -21,7 +21,7 @@ function reducer(state = initialState, action) {
             return Object.assign({}, state, {
                 cpmments: [
                     id: action.id,
-                    Text: action.type,
+                    Text: action.text,
                     votes: 0
                 
                 , state]
@@ -32,23 +32,21 @@ function reducer(state = initialState, action) {
             })
         case EDIT_COMMENT:
             return Object.assign({}, state {
-                comments:                  
+                comments:         
+                    id: action.id,
+                    text: action.text
             })    
         
         case THUMB_DOWN_COMMENT:
             return Object.assign({}, state, {
                 comments: [
-                    id: action.id,
-                    number: action.number,
-                    votes--
+                    id: action.id
                 ]
             })
     case THUMB_UP_COMMENT:
             return Object.assign({}, state {
                 comments: [
-                    id: action.id,
-                    number: action.number,
-                    votes++
+                    id: action.id
             })
             }
         default:
