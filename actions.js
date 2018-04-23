@@ -8,7 +8,7 @@ export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 function addComment(text) {
     return {
-        tyoe: ADD_COMMENT,
+        type: ADD_COMMENT,
         text,
         id: uuid.v4()
     }
